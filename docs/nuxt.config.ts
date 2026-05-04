@@ -15,10 +15,6 @@ const gitBranch = (() => {
 export default defineNuxtConfig({
   extends: ['docus'],
   modules: ['@nuxtjs/i18n', 'nuxt-studio'],
-  css: ['~/assets/css/main.css'],
-  site: {
-    name: 'مجموعة العزب',
-  },
   app: {
     head: {
       link: [
@@ -31,12 +27,15 @@ export default defineNuxtConfig({
       ],
     },
   },
+  css: ['~/assets/css/main.css'],
+  site: {
+    name: 'مجموعة العزب',
+  },
   mdc: {
     highlight: {
       shikiEngine: 'javascript',
     },
   },
-  compatibilityDate: '2025-07-18',
 
   // ── بصمة الإنتاج — تُحقن في وقت البناء وتُكشف للعميل ──────────────────
   runtimeConfig: {
@@ -49,6 +48,7 @@ export default defineNuxtConfig({
       },
     },
   },
+  compatibilityDate: '2025-07-18',
 
   nitro: {
     serverAssets: [

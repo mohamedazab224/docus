@@ -6,7 +6,7 @@ export default defineNuxtPlugin(() => {
   const { buildInfo } = useRuntimeConfig().public
 
   // طباعة بصمة الإنتاج في وحدة التحكم (console)
-  // eslint-disable-next-line no-console
+
   console.info(
     `%c مجموعة العزب — قاعدة المعرفة %c\n`
     + ` 📦 الإصدار : ${buildInfo.version}\n`

@@ -40,7 +40,7 @@ export interface KBBrand {
 export interface AlazabKB {
   schema: string
   enterprise: Record<string, unknown>
-  master: { id: string; title: string; content: string }
+  master: { id: string, title: string, content: string }
   brands: Record<string, KBBrand>
   faqs: KBFAQ[]
   routing_rules: unknown
@@ -49,7 +49,7 @@ export interface AlazabKB {
   chunks: KBChunk[]
   stats: Record<string, number>
   meta_whatsapp_public?: unknown
-  audio_assets_manifest?: Array<{ brand: string; [key: string]: unknown }>
+  audio_assets_manifest?: Array<{ brand: string, [key: string]: unknown }>
   security?: { sanitized_env_keys: string[] }
 }
 
@@ -132,7 +132,7 @@ export function searchKB(
   query: string,
   brand = 'all',
   limit = 8,
-): { query: string; brand: string; count: number; results: SearchResult[] } {
+): { query: string, brand: string, count: number, results: SearchResult[] } {
   const rows: SearchResult[] = []
   for (const c of kb.chunks || []) {
     if (brand !== 'all' && c.brand !== brand) continue
@@ -159,7 +159,7 @@ export function faqSearch(
   kb: AlazabKB,
   query: string,
   limit = 6,
-): { query?: string; count: number; results: (KBFAQ & { score?: number })[] } {
+): { query?: string, count: number, results: (KBFAQ & { score?: number })[] } {
   const cap = Math.max(1, Math.min(20, limit))
   if (!query) return { count: (kb.faqs || []).length, results: (kb.faqs || []).slice(0, cap) }
   const rows: (KBFAQ & { score: number })[] = []
