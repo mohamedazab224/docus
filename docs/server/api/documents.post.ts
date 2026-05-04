@@ -12,7 +12,7 @@ export default defineEventHandler(async (event) => {
   const type = getQuery(event).type as string
 
   if (type === 'pdf') {
-    const body = await readBody<{ title?: string; content?: string }>(event)
+    const body = await readBody<{ title?: string, content?: string }>(event)
     const title = body?.title || 'Document'
     const content = body?.content || ''
     const pdfBytes = await createPdf(title, content)
