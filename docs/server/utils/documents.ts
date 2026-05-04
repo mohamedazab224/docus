@@ -13,7 +13,7 @@ export async function createPdf(title: string, content: string): Promise<Uint8Ar
   const doc = await PDFDocument.create()
   const font = await doc.embedFont(StandardFonts.Helvetica)
   const page = doc.addPage()
-  const { width, height } = page.getSize()
+  const { height } = page.getSize()
   const fontSize = 12
 
   page.drawText(title, {

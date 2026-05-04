@@ -3,11 +3,15 @@ import { execSync } from 'node:child_process'
 // ── بصمة الإنتاج (Production Fingerprint) ─────────────────────────────────
 const buildTime = new Date().toISOString()
 const gitCommit = (() => {
-  try { return execSync('git rev-parse --short HEAD').toString().trim() }
+  try {
+    return execSync('git rev-parse --short HEAD').toString().trim()
+  }
   catch { return 'unknown' }
 })()
 const gitBranch = (() => {
-  try { return execSync('git rev-parse --abbrev-ref HEAD').toString().trim() }
+  try {
+    return execSync('git rev-parse --abbrev-ref HEAD').toString().trim()
+  }
   catch { return 'unknown' }
 })()
 // ──────────────────────────────────────────────────────────────────────────

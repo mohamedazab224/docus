@@ -56,7 +56,10 @@ function clip(text, q = '', radius = 520) {
   const qTokens = tokens(q).filter(x => x.length > 3)
   const nraw = normalizeArabic(raw)
   let idx = -1
-  for (const t of qTokens) { idx = nraw.indexOf(t); if (idx >= 0) break }
+  for (const t of qTokens) {
+    idx = nraw.indexOf(t)
+    if (idx >= 0) break
+  }
   if (idx < 0) return raw.slice(0, radius * 2) + '…'
   const start = Math.max(0, idx - radius)
   const end = Math.min(raw.length, idx + radius)
@@ -236,8 +239,12 @@ function getPrompt(name, args = {}) {
   throw new Error(`prompt not found: ${name}`)
 }
 
-function ok(id, result) { return { jsonrpc: '2.0', id, result } }
-function err(id, code, message, data) { return { jsonrpc: '2.0', id: id ?? null, error: { code, message, ...(data ? { data } : {}) } } }
+function ok(id, result) {
+  return { jsonrpc: '2.0', id, result }
+}
+function err(id, code, message, data) {
+  return { jsonrpc: '2.0', id: id ?? null, error: { code, message, ...(data ? { data } : {}) } }
+}
 
 async function handle(req) {
   if (!req || req.jsonrpc !== '2.0') return err(req && req.id, -32600, 'Invalid JSON-RPC request')
@@ -268,15 +275,24 @@ async function handle(req) {
   }
 }
 
-process.stdout.on('error', (e) => { if (e && e.code === 'EPIPE') process.exit(0); throw e })
-function writeJson(obj) { if (obj) process.stdout.write(JSON.stringify(obj) + '\n') }
+process.stdout.on('error', (e) => {
+  if (e && e.code === 'EPIPE') process.exit(0)
+  throw e
+})
+function writeJson(obj) {
+  if (obj) process.stdout.write(JSON.stringify(obj) + '\n')
+}
 
 async function stdio() {
   const rl = readline.createInterface({ input: process.stdin, crlfDelay: Infinity })
   for await (const line of rl) {
     if (!line.trim()) continue
-    try { writeJson(await handle(JSON.parse(line))) }
-    catch (e) { writeJson(err(null, -32700, 'Parse error', e.message)) }
+    try {
+      writeJson(await handle(JSON.parse(line)))
+    }
+    catch (e) {
+      writeJson(err(null, -32700, 'Parse error', e.message))
+    }
   }
   process.exit(0)
 }
