@@ -1,0 +1,110 @@
+[
+  {
+    "id": "master__alazab_enterprise_master_knowledge_md",
+    "title": "master/alazab_enterprise_master_knowledge.md",
+    "source_path": "master/alazab_enterprise_master_knowledge.md",
+    "brand": "enterprise",
+    "type": "document",
+    "language": "ar-EG",
+    "size_chars": 4938
+  },
+  {
+    "id": "brands__alazab_group_md",
+    "title": "brands/alazab_group.md",
+    "source_path": "brands/alazab_group.md",
+    "brand": "alazab_group",
+    "type": "brand_profile",
+    "language": "ar-EG",
+    "size_chars": 3819
+  },
+  {
+    "id": "brands__brand_identity_md",
+    "title": "brands/brand_identity.md",
+    "source_path": "brands/brand_identity.md",
+    "brand": "brand_identity",
+    "type": "brand_profile",
+    "language": "ar-EG",
+    "size_chars": 3759
+  },
+  {
+    "id": "brands__luxury_finishing_md",
+    "title": "brands/luxury_finishing.md",
+    "source_path": "brands/luxury_finishing.md",
+    "brand": "luxury_finishing",
+    "type": "brand_profile",
+    "language": "ar-EG",
+    "size_chars": 3485
+  },
+  {
+    "id": "brands__uberfix_md",
+    "title": "brands/uberfix.md",
+    "source_path": "brands/uberfix.md",
+    "brand": "uberfix",
+    "type": "brand_profile",
+    "language": "ar-EG",
+    "size_chars": 3639
+  },
+  {
+    "id": "brands__laban_alasfour_md",
+    "title": "brands/laban_alasfour.md",
+    "source_path": "brands/laban_alasfour.md",
+    "brand": "laban_alasfour",
+    "type": "brand_profile",
+    "language": "ar-EG",
+    "size_chars": 3605
+  },
+  {
+    "id": "docs__content_governance_md",
+    "title": "docs/content_governance.md",
+    "source_path": "docs/content_governance.md",
+    "brand": "enterprise",
+    "type": "governance",
+    "language": "ar-EG",
+    "size_chars": 975
+  },
+  {
+    "id": "docs__deployment_runbook_md",
+    "title": "docs/deployment_runbook.md",
+    "source_path": "docs/deployment_runbook.md",
+    "brand": "enterprise",
+    "type": "governance",
+    "language": "ar-EG",
+    "size_chars": 813
+  },
+  {
+    "id": "SECURITY_NOTES_md",
+    "title": "SECURITY_NOTES.md",
+    "source_path": "SECURITY_NOTES.md",
+    "brand": "enterprise",
+    "type": "document",
+    "language": "ar-EG",
+    "size_chars": 844
+  },
+  {
+    "id": "README_md",
+    "title": "README.md",
+    "source_path": "README.md",
+    "brand": "enterprise",
+    "type": "document",
+    "language": "ar-EG",
+    "size_chars": 1804
+  },
+  {
+    "id": "faq__faqs_ar_json",
+    "title": "faq/faqs_ar.json",
+    "source_path": "faq/faqs_ar.json",
+    "brand": "enterprise",
+    "type": "faq",
+    "language": "ar-EG",
+    "size_chars": 21367
+  },
+  {
+    "id": "routing__enterprise_intent_routing_rules_json",
+    "title": "routing/enterprise_intent_routing_rules.json",
+    "source_path": "routing/enterprise_intent_routing_rules.json",
+    "brand": "enterprise",
+    "type": "routing",
+    "language": "ar-EG",
+    "size_chars": 9822
+  }
+]

@@ -1,0 +1,42 @@
+version: "3.1"
+
+slots:
+  enterprise_route:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: custom
+  customer_type:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+  service_type:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+  location:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+  contact_phone:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+
+forms:
+  enterprise_lead_form:
+    required_slots:
+      - service_type
+      - customer_type
+      - location
+      - contact_phone
+
+responses:
+  utter_enterprise_need_more_data:
+    - text: "حتى أوجه طلبك بدقة، أحتاج نوع الخدمة والموقع ووسيلة التواصل وأي صور أو ملفات متاحة."
+  utter_enterprise_no_final_price:
+    - text: "لا يمكن تأكيد سعر نهائي قبل معرفة النطاق ومراجعة البيانات من الفريق المختص."

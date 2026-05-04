@@ -1,0 +1,13 @@
+# مصادر قاعدة معرفة مجموعة العزب
+
+المصادر التشغيلية الأعلى:
+- master/alazab_enterprise_master_knowledge.md
+- brands/alazab_group.md
+- brands/brand_identity.md
+- brands/luxury_finishing.md
+- brands/uberfix.md
+- brands/laban_alasfour.md
+- faq/faqs_ar.json
+- routing/enterprise_intent_routing_rules.json
+
+آخر تحديث: 2026-05-04T04:39:45Z
